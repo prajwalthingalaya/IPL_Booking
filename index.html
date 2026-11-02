@@ -1,149 +1,225 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME | IPL 2026 Ticket Booking</title>
-    </head>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
 <body>
+
     <header>
         <h1>Welcome to IPL 2026 Ticket Booking</h1>
+        <p>Book Your Tickets and Experience the Excitement!</p>
+    </header>
 
-        <nav>
-            <ul>
-                <li><a href = "#">Matches</a></li>
-                <li><a href = "#">Book Tickets</a></li>
-                <li><a href = "#">My booking</a></li>
-                <li><a href = "#">Guidelines</a></li>
-            </ul>
-        </nav>
-        </header>
-        
-            <section>
-                <img src ="" alt = "IPL 2026" width = "100%">
-                <p>Experience the thrill of the IPL 2026!</p>
-                <button>View Schedule</button>
-                <button>Book Tickets</button>
-            </section>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#matches">Matches</a></li>
+            <li><a href="#booking">Book Tickets</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#guidelines">Guidelines</a></li>
+        </ul>
+    </nav>
 
-            <section>
+    <main>
+
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Experience the Thrill of IPL 2026!</h2>
+
+                <p>
+                    Get ready to witness exciting cricket matches
+                    with your favourite teams.
+                    Book your IPL tickets today!
+                </p>
+
+                <a href="#matches" class="btn">View Schedule</a>
+                <a href="#booking" class="btn">Book Tickets</a>
+            </div>
+        </section>
+
+        <section id="about">
             <h2>About IPL 2026</h2>
-            <ul>
-                <h3>Popular teams </h3>
-                <li>Royal Challengers Bangalore</li>
+
+            <p>
+                The Indian Premier League (IPL) is one of the most
+                exciting cricket tournaments. Enjoy thrilling matches,
+                amazing performances and unforgettable moments.
+            </p>
+
+            <h3>Popular Teams</h3>
+
+            <ul class="team-list">
+                <li>Royal Challengers Bengaluru</li>
                 <li>Mumbai Indians</li>
                 <li>Kolkata Knight Riders</li>
-                 <li>Chennai Super Kings</li>
+                <li>Chennai Super Kings</li>
+                <li>Rajasthan Royals</li>
+                <li>Gujarat Titans</li>
             </ul>
-            </section>
+        </section>
 
-            <section>
-                <table border="1">
-                    <tr>
-                        <th>Match</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Venue</th>
-                    </tr>
-                    <tr>
-                        <td>RCB vs MI</td>
-                        <td>April 10,2026</td>
-                        <td>2.30 PM</td>
-                        <td>Chinaswami stadium</td>
-                    </tr>
-                    <tr>
-                        <td>CSK vs KKR</td>
-                        <td>April 11,2026</td>
-                        <td>7.00 PM</td>
-                        <td>MCA stadium</td>
-                    </tr>
-                    <tr>
-                        <td>RR vs GT</td>
-                        <td>April 12,2026</td>
-                        <td>7.00 PM</td>
-                        <td>Wankade stadium</td>
-                    </tr>
+        <section id="matches">
+            <h2>IPL 2026 Match Schedule</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Match</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Venue</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>RCB vs MI</td>
+                            <td>April 10, 2026</td>
+                            <td>2:30 PM</td>
+                            <td>Chinnaswamy Stadium</td>
+                        </tr>
+
+                        <tr>
+                            <td>CSK vs KKR</td>
+                            <td>April 11, 2026</td>
+                            <td>7:00 PM</td>
+                            <td>MCA Stadium</td>
+                        </tr>
+
+                        <tr>
+                            <td>RR vs GT</td>
+                            <td>April 12, 2026</td>
+                            <td>7:00 PM</td>
+                            <td>Wankhede Stadium</td>
+                        </tr>
+                    </tbody>
                 </table>
-            </section>
+            </div>
+        </section>
 
-            <section>
-                    <label for="name">Name : </label>
-                    <input type="text" id="name" required>
-                    <br><br>
-                    <label for="email">Email : </label>
-                    <input type="email" id="email" name="email" required>
-                    <br><br>
+        <section id="booking">
+            <h2>Book Your Tickets</h2>
+
+            <p>Fill in the details below to book your IPL tickets.</p>
+
+            <form action="#" method="get">
+
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <div class="form-group">
                     <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                    <br><br>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required>
+                </div>
 
+                <div class="form-group">
+                    <label for="match">Select Match:</label>
+                    <select id="match" name="match" required>
+                        <option value="">-- Select Match --</option>
+                        <option value="RCB vs MI">RCB vs MI</option>
+                        <option value="CSK vs KKR">CSK vs KKR</option>
+                        <option value="RR vs GT">RR vs GT</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <label for="ticket">Number of Tickets:</label>
-                    <select type id="ticket" name="ticket">
-                       <option value="1">1</option>
+                    <select id="ticket" name="ticket" required>
+                        <option value="">-- Select Tickets --</option>
+                        <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                        </select>
-                      <br><br>
+                    </select>
+                </div>
 
-            <label for="stand">Select Stand:</label>
-            <select id="stand" name="stand">
-                <option>General Stand</option>
-                <option>Premium Stand</option>
-                <option>VIP Stand</option>
-            </select>
+                <div class="form-group">
+                    <label for="stand">Select Stand:</label>
+                    <select id="stand" name="stand" required>
+                        <option value="">-- Select Stand --</option>
+                        <option value="General Stand">General Stand</option>
+                        <option value="Premium Stand">Premium Stand</option>
+                        <option value="VIP Stand">VIP Stand</option>
+                    </select>
+                </div>
 
-            <br><br>
+                <button type="submit" class="book-btn">
+                    Book Tickets
+                </button>
 
-            <button type="submit">Book Tickets</button>
-        </form>
-          </section>
+            </form>
+        </section>
 
-    <section id="guidelines">
-        <h2>Match Guidelines and Stadium Rules</h2>
+        <section id="guidelines">
+            <h2>Match Guidelines and Stadium Rules</h2>
 
-        <h3>Entry Guidelines</h3>
-        <ul>
-            <li>Carry a valid match ticket for entry.</li>
-            <li>Carry a valid government-issued photo ID.</li>
-            <li>Arrive at the stadium well before match time.</li>
-            <li>Follow security checking procedures.</li>
-        </ul>
+            <h3>Entry Guidelines</h3>
 
-        <h3>Prohibited Items</h3>
-        <ul>
-            <li>Outside food and beverages may not be permitted.</li>
-            <li>Weapons and sharp objects are prohibited.</li>
-            <li>Fireworks and dangerous materials are prohibited.</li>
-            <li>Professional cameras may require special permission.</li>
-        </ul>
+            <ul>
+                <li>Carry a valid match ticket for entry.</li>
+                <li>Carry a valid government-issued photo ID.</li>
+                <li>Arrive at the stadium well before match time.</li>
+                <li>Follow security checking procedures.</li>
+            </ul>
 
-        <h3>General Instructions</h3>
-        <ul>
-            <li>Follow instructions given by stadium officials.</li>
-            <li>Do not damage stadium property.</li>
-            <li>Maintain cleanliness inside the stadium.</li>
-            <li>Do not enter restricted areas.</li>
-            <li>Tickets are subject to the stadium's terms and conditions.</li>
-        </ul>
+            <h3>Prohibited Items</h3>
 
-    </section>
+            <ul>
+                <li>Outside food and beverages may not be permitted.</li>
+                <li>Weapons and sharp objects are prohibited.</li>
+                <li>Fireworks and dangerous materials are prohibited.</li>
+                <li>Professional cameras may require special permission.</li>
+            </ul>
 
-</main>
+            <h3>General Instructions</h3>
 
-<footer>
-    <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
-</footer>
+            <ul>
+                <li>Follow instructions given by stadium officials.</li>
+                <li>Do not damage stadium property.</li>
+                <li>Maintain cleanliness inside the stadium.</li>
+                <li>Do not enter restricted areas.</li>
+                <li>Tickets are subject to the stadium's terms and conditions.</li>
+            </ul>
+        </section>
 
-</script>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
+        <p>Designed using HTML and CSS.</p>
+    </footer>
 
 </body>
 </html>
-
-            
-                
-
-
-
-        
