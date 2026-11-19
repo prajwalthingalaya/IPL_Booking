@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Ticket Booking</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>IPL 2026 Ticket Booking</h1>
+        <p>Book Your Tickets and Experience the Excitement!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#matches">Matches</a></li>
+            <li><a href="booking.html">Book Tickets</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#guidelines">Guidelines</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="booking">
+
+            <h2>Book Your IPL Tickets</h2>
+
+            <p>Fill in the details below to book your IPL tickets.</p>
+
+            <form id="bookingForm">
+
+                <div class="form-group">
+
+                    <label for="name">Full Name:</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        minlength="3"
+                        maxlength="40"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="email">Email Address:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="phone">Phone Number:</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter 10 digit phone number"
+                        pattern="[0-9]{10}"
+                        minlength="10"
+                        maxlength="10"
+                        title="Please enter exactly 10 digits"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="match">Select Match:</label>
+
+                    <select id="match" name="match" required>
+
+                        <option value="">-- Select Match --</option>
+                        <option value="RCB vs MI">RCB vs MI</option>
+                        <option value="CSK vs KKR">CSK vs KKR</option>
+                        <option value="RR vs GT">RR vs GT</option>
+                        <option value="PBKS vs RCB">PBKS vs RCB</option>
+                        <option value="RR vs CSK">RR vs CSK</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="stand">Select Stand Category:</label>
+
+                    <select id="stand" name="stand" required>
+
+                        <option value="">-- Select Stand --</option>
+                        <option value="General Stand">General Stand</option>
+                        <option value="Premium Stand">Premium Stand</option>
+                        <option value="VIP Stand">VIP Stand</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="tickets">Number of Tickets:</label>
+
+                    <input
+                        type="number"
+                        id="tickets"
+                        name="tickets"
+                        min="1"
+                        max="5"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <p>Booking Preference:</p>
+
+                    <input
+                        type="radio"
+                        id="regular"
+                        name="preference"
+                        value="Regular"
+                        required>
+
+                    <label for="regular">Regular Booking</label>
+
+                    <input
+                        type="radio"
+                        id="accessible"
+                        name="preference"
+                        value="Accessible">
+
+                    <label for="accessible">Accessible Seating</label>
+
+                </div>
+
+                <button type="submit" class="book-btn">
+                    Submit Booking
+                </button>
+
+                <button type="reset" class="book-btn">
+                    Reset Form
+                </button>
+
+            </form>
+
+            <h3 id="successMessage"
+                style="display: none; color: green;">
+
+                Booking Completed Successfully!
+
+            </h3>
+
+            <p>
+                <a href="index.html">Back to Home</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
+        <p>Designed using HTML and CSS.</p>
+
+    </footer>
+
+    <script>
+
+        const form = document.getElementById("bookingForm");
+
+        const message = document.getElementById("successMessage");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            if (form.checkValidity()) {
+
+                message.style.display = "block";
+
+                message.innerHTML =
+                    "Booking Completed Successfully!";
+
+            } else {
+
+                form.reportValidity();
+
+            }
+
+        });
+
+        form.addEventListener("reset", function() {
+
+            message.style.display = "none";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
