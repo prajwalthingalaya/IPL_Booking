@@ -5,20 +5,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME | IPL 2026 Ticket Booking</title>
+    <title>IPL Ticket Booking</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <h1>Welcome to IPL 2026 Ticket Booking</h1>
-        <p>Book Your Tickets and Experience the Excitement!</p>
+    <header class="site-header">
+        <h1>IPL 2026 Ticket Booking</h1>
+        <p>Experience The Stadium Energy Live!</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#matches">Matches</a></li>
             <li><a href="booking.html">Book Tickets</a></li>
             <li><a href="#about">About Us</a></li>
@@ -28,139 +29,122 @@
 
     <main>
 
-        <section id="home" class="hero">
-            <div class="hero-content">
+        <section class="hero">
+            <h2>Welcome to IPL 2026</h2>
+            <p>Watch your favourite teams compete live in the stadium.</p>
+            <a class="main-button" href="#matches">View Matches</a>
+        </section>
 
-                <h2>Experience the Thrill of IPL 2026!</h2>
+        <section id="about" class="content-section">
+            <h2>About IPL</h2>
+            <p>
+                The Indian Premier League (IPL) is a professional
+                T20 cricket league featuring teams representing
+                different cities in India. Enjoy exciting matches
+                and support your favourite team.
+            </p>
+        </section>
 
-                <p>
-                    Get ready to witness exciting cricket matches
-                    with your favourite teams.
-                    Book your IPL tickets today!
-                </p>
+        <section id="teams" class="content-section">
+            <h2>IPL Teams</h2>
 
-                <a href="#matches" class="btn">View Schedule</a>
-                <a href="booking.html" class="btn">Book Tickets</a>
-
+            <div class="team-list">
+                <div class="team-card">Chennai Super Kings (CSK)</div>
+                <div class="team-card">Royal Challengers Bengaluru (RCB)</div>
+                <div class="team-card">Mumbai Indians (MI)</div>
+                <div class="team-card">Kolkata Knight Riders (KKR)</div>
+                <div class="team-card">Rajasthan Royals (RR)</div>
+                <div class="team-card">Gujarat Titans (GT)</div>
+                <div class="team-card">Punjab Kings (PBKS)</div>
             </div>
         </section>
 
-        <section id="about">
+        <section id="matches" class="content-section">
 
-            <h2>About IPL 2026</h2>
-
-            <p>
-                The Indian Premier League (IPL) is one of the most
-                exciting cricket tournaments. Enjoy thrilling matches,
-                amazing performances and unforgettable moments.
-            </p>
-
-            <h3>Popular Teams</h3>
-
-            <ul class="team-list">
-                <li>Royal Challengers Bengaluru</li>
-                <li>Mumbai Indians</li>
-                <li>Kolkata Knight Riders</li>
-                <li>Chennai Super Kings</li>
-                <li>Rajasthan Royals</li>
-                <li>Gujarat Titans</li>
-            </ul>
-
-        </section>
-
-        <section id="matches">
-
-            <h2>IPL 2026 Match Schedule</h2>
+            <h2>Upcoming Match Schedule</h2>
 
             <div class="table-container">
-
                 <table>
-
                     <thead>
                         <tr>
+                            <th>Match No.</th>
                             <th>Match</th>
                             <th>Date</th>
-                            <th>Time</th>
                             <th>Venue</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
 
                     <tbody>
-
                         <tr>
+                            <td>1</td>
                             <td>RCB vs MI</td>
-                            <td>April 10, 2026</td>
-                            <td>2:30 PM</td>
-                            <td>Chinnaswamy Stadium</td>
+                            <td>To be announced</td>
+                            <td>Bengaluru</td>
+                            <td>
+                                <a class="book-button" href="booking.html?match=RCB%20vs%20MI">Book</a>
+                            </td>
                         </tr>
 
                         <tr>
+                            <td>2</td>
                             <td>CSK vs KKR</td>
-                            <td>April 11, 2026</td>
-                            <td>7:00 PM</td>
-                            <td>MCA Stadium</td>
+                            <td>To be announced</td>
+                            <td>Chennai</td>
+                            <td>
+                                <a class="book-button" href="booking.html?match=CSK%20vs%20KKR">Book</a>
+                            </td>
                         </tr>
 
                         <tr>
+                            <td>3</td>
                             <td>RR vs GT</td>
-                            <td>April 12, 2026</td>
-                            <td>7:00 PM</td>
-                            <td>Wankhede Stadium</td>
+                            <td>To be announced</td>
+                            <td>Jaipur</td>
+                            <td>
+                                <a class="book-button" href="booking.html?match=RR%20vs%20GT">Book</a>
+                            </td>
                         </tr>
 
                         <tr>
+                            <td>4</td>
                             <td>PBKS vs RCB</td>
-                            <td>April 13, 2026</td>
-                            <td>7:00 PM</td>
-                            <td>Darmashala Stadium</td>
+                            <td>To be announced</td>
+                            <td>Punjab</td>
+                            <td>
+                                <a class="book-button" href="booking.html?match=PBKS%20vs%20RCB">Book</a>
+                            </td>
                         </tr>
 
                         <tr>
+                            <td>5</td>
                             <td>RR vs CSK</td>
-                            <td>April 14, 2026</td>
-                            <td>7:00 PM</td>
-                            <td>Chepauk Stadium</td>
+                            <td>To be announced</td>
+                            <td>Jaipur</td>
+                            <td>
+                                <a class="book-button" href="booking.html?match=RR%20vs%20CSK">Book</a>
+                            </td>
                         </tr>
-
                     </tbody>
-
                 </table>
-
             </div>
 
         </section>
 
-        <section id="guidelines">
+        <section id="guidelines" class="content-section">
 
-            <h2>Match Guidelines and Stadium Rules</h2>
+            <h2>Booking Guidelines</h2>
 
-            <h3>Entry Guidelines</h3>
-
-            <ul>
-                <li>Carry a valid match ticket for entry.</li>
-                <li>Carry a valid government-issued photo ID.</li>
-                <li>Arrive at the stadium well before match time.</li>
-                <li>Follow security checking procedures.</li>
+            <ul class="guidelines-list">
+                <li>Enter your correct name and contact details.</li>
+                <li>Provide a valid email address.</li>
+                <li>Enter a valid 10-digit phone number.</li>
+                <li>Select the match and stand category.</li>
+                <li>You can select between 1 and 5 tickets.</li>
+                <li>Check your details before submitting the form.</li>
             </ul>
 
-            <h3>Prohibited Items</h3>
-
-            <ul>
-                <li>Outside food and beverages may not be permitted.</li>
-                <li>Weapons and sharp objects are prohibited.</li>
-                <li>Fireworks and dangerous materials are prohibited.</li>
-                <li>Professional cameras may require special permission.</li>
-            </ul>
-
-            <h3>General Instructions</h3>
-
-            <ul>
-                <li>Follow instructions given by stadium officials.</li>
-                <li>Do not damage stadium property.</li>
-                <li>Maintain cleanliness inside the stadium.</li>
-                <li>Do not enter restricted areas.</li>
-                <li>Tickets are subject to the stadium's terms and conditions.</li>
-            </ul>
+            <a class="main-button" href="booking.html">Book Your Tickets</a>
 
         </section>
 
@@ -168,9 +152,8 @@
 
     <footer>
         <p>&copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
-        <p>Designed using HTML and CSS.</p>
+        <p>Designed using HTML, CSS and JavaScript.</p>
     </footer>
 
 </body>
-
 </html>
