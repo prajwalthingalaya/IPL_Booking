@@ -1,6 +1,5 @@
 
 function showToast(message) {
-
     let toast = document.getElementById("toast");
 
     if (!toast) {
@@ -12,70 +11,80 @@ function showToast(message) {
     toast.textContent = message;
     toast.classList.add("show");
 
-    clearTimeout(window.toastTimer);
-
-    window.toastTimer = setTimeout(function() {
+    setTimeout(function () {
         toast.classList.remove("show");
-    }, 3000);
-
+    }, 2000);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+    const match = document.getElementById("match");
+    const stand = document.getElementById("stand");
+    const tickets = document.getElementById("tickets");
 
-    const bookingForm = document.getElementById("bookingForm");
+    const summaryMatch = document.getElementById("summaryMatch");
+    const summaryStand = document.getElementById("summaryStand");
+    const summaryTickets = document.getElementById("summaryTickets");
+    const summaryPrice = document.getElementById("summaryPrice");
+    const totalPrice = document.getElementById("totalPrice");
+
+    const bookingForm = document.querySelector("#bookingForm");
     const successMessage = document.getElementById("successMessage");
-    const matchSelect = document.getElementById("match");
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const selectedMatch = urlParams.get("match");
+    const prices = {
+        General: 500,
+        Premium: 1000,
+        VIP: 2000
+    };
 
-    if (selectedMatch && matchSelect) {
+    function updateSummary() {
+        const selectedMatch = match.value;
+        const selectedStand = stand.value;
+        let quantity = Number(tickets.value);
 
-        matchSelect.value = selectedMatch;
-
-        const bookingSection = document.getElementById("booking");
-
-        if (bookingSection) {
-
-            setTimeout(function() {
-
-                bookingSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-
-                showToast("Match selected! Please complete your booking.");
-
-            }, 300);
-
+        if (!Number.isFinite(quantity) || quantity < 1) {
+            quantity = 1;
         }
 
+        if (quantity > 5) {
+            quantity = 5;
+        }
+
+        const price = prices[selectedStand] || 0;
+        const total = price * quantity;
+
+        summaryMatch.textContent = selectedMatch || "Not selected";
+        summaryStand.textContent = selectedStand || "Not selected";
+        summaryTickets.textContent = quantity;
+        summaryPrice.textContent = price;
+        totalPrice.textContent = total;
+
+        showToast("Booking summary updated");
     }
 
-    if (bookingForm) {
+    match.addEventListener("change", updateSummary);
+    stand.addEventListener("change", updateSummary);
+    tickets.addEventListener("input", updateSummary);
 
-        bookingForm.addEventListener("submit", function(event) {
+    bookingForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-            event.preventDefault();
+        if (!bookingForm.checkValidity()) {
+            bookingForm.reportValidity();
+            return;
+        }
 
-            if (bookingForm.checkValidity()) {
+        successMessage.textContent = "Your booking details have been submitted successfully!";
+        successMessage.style.display = "block";
 
-                successMessage.style.display = "block";
+        showToast("Booking submitted successfully!");
+    });
 
-                showToast("Booking form submitted successfully!");
-
-            } else {
-
-                bookingForm.reportValidity();
-
-            }
-
-        });
-
-        bookingForm.addEventListener("reset", function() {
+    bookingForm.addEventListener("reset", function () {
+        setTimeout(function () {
             successMessage.style.display = "none";
-        });
+            updateSummary();
+        }, 0);
+    });
 
-    }
-
+    updateSummary();
 });
