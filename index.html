@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,138 +8,154 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="app.js" defer></script>
 </head>
+
 <body>
 
-<header class="site-header">
-    <div class="navbar">
-        <a href="index.html" class="logo">IPL TICKETS</a>
+    <header class="site-header">
+        <div class="navbar">
+            <a href="index.html" class="logo">IPL TICKETS</a>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
-            ☰
-        </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+                ☰
+            </button>
 
-        <nav class="nav-links" id="navLinks">
-            <a href="#home">Home</a>
-            <a href="#matches">Matches</a>
-            <a href="#guidelines">Guidelines</a>
-            <a href="booking.html">Book Ticket</a>
-        </nav>
-    </div>
-</header>
-
-<section class="hero" id="home">
-    <div class="hero-content">
-        <p class="hero-tag">INDIAN PREMIER LEAGUE</p>
-        <h1>Experience The Stadium Energy Live!</h1>
-        <p>Choose your match, select your stand and book your IPL tickets.</p>
-        <a href="#matches" class="main-button">Explore Matches</a>
-    </div>
-</section>
-
-<section class="content-section" id="matches">
-    <div class="section-heading">
-        <p class="section-tag">UPCOMING GAMES</p>
-        <h2>Match Schedule</h2>
-        <p>Choose your favourite team and find your next match.</p>
-    </div>
-
-    <div class="match-controls">
-        <div class="filter-control">
-            <label for="teamFilter">Filter by Team</label>
-            <select id="teamFilter">
-                <option value="all">All Teams</option>
-                <option value="RCB">Royal Challengers Bengaluru</option>
-                <option value="MI">Mumbai Indians</option>
-                <option value="CSK">Chennai Super Kings</option>
-                <option value="KKR">Kolkata Knight Riders</option>
-                <option value="RR">Rajasthan Royals</option>
-                <option value="GT">Gujarat Titans</option>
-                <option value="PBKS">Punjab Kings</option>
-            </select>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#matches">Matches</a>
+                <a href="#guidelines">Guidelines</a>
+                <a href="booking.html">Book Ticket</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="view-controls">
-            <button type="button" id="gridView" class="view-button active">Grid View</button>
-            <button type="button" id="listView" class="view-button">List View</button>
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-tag">INDIAN PREMIER LEAGUE</p>
+            <h1>Experience The Stadium Energy Live!</h1>
+            <p>Choose your match, select your stand and book your IPL tickets.</p>
+            <a href="#matches" class="main-button">Explore Matches</a>
         </div>
     </div>
 
-    <div class="match-grid" id="matchContainer">
+    <div class="content-section" id="matches">
 
-        <article class="match-card" data-teams="RCB MI">
-            <span class="match-number">MATCH 01</span>
-            <h3>RCB vs MI</h3>
-            <p>Royal Challengers Bengaluru vs Mumbai Indians</p>
-            <p class="match-info">M. Chinnaswamy Stadium</p>
-            <a href="booking.html?match=RCB%20vs%20MI" class="book-button">Book Tickets</a>
-        </article>
+        <div class="section-heading">
+            <p class="section-tag">UPCOMING GAMES</p>
+            <h2>Match Schedule</h2>
+            <p>Choose your favourite team and find your next match.</p>
+        </div>
 
-        <article class="match-card" data-teams="CSK KKR">
-            <span class="match-number">MATCH 02</span>
-            <h3>CSK vs KKR</h3>
-            <p>Chennai Super Kings vs Kolkata Knight Riders</p>
-            <p class="match-info">M. A. Chidambaram Stadium</p>
-            <a href="booking.html?match=CSK%20vs%20KKR" class="book-button">Book Tickets</a>
-        </article>
+        <div class="match-controls">
 
-        <article class="match-card" data-teams="RR GT">
-            <span class="match-number">MATCH 03</span>
-            <h3>RR vs GT</h3>
-            <p>Rajasthan Royals vs Gujarat Titans</p>
-            <p class="match-info">Sawai Mansingh Stadium</p>
-            <a href="booking.html?match=RR%20vs%20GT" class="book-button">Book Tickets</a>
-        </article>
+            <div class="filter-control">
+                <label for="teamFilter">Filter by Team</label>
 
-        <article class="match-card" data-teams="PBKS RCB">
-            <span class="match-number">MATCH 04</span>
-            <h3>PBKS vs RCB</h3>
-            <p>Punjab Kings vs Royal Challengers Bengaluru</p>
-            <p class="match-info">PCA Stadium</p>
-            <a href="booking.html?match=PBKS%20vs%20RCB" class="book-button">Book Tickets</a>
-        </article>
+                <select id="teamFilter">
+                    <option value="all">All Teams</option>
+                    <option value="RCB">Royal Challengers Bengaluru</option>
+                    <option value="MI">Mumbai Indians</option>
+                    <option value="CSK">Chennai Super Kings</option>
+                    <option value="KKR">Kolkata Knight Riders</option>
+                    <option value="RR">Rajasthan Royals</option>
+                    <option value="GT">Gujarat Titans</option>
+                    <option value="PBKS">Punjab Kings</option>
+                </select>
+            </div>
 
-        <article class="match-card" data-teams="RR CSK">
-            <span class="match-number">MATCH 05</span>
-            <h3>RR vs CSK</h3>
-            <p>Rajasthan Royals vs Chennai Super Kings</p>
-            <p class="match-info">Sawai Mansingh Stadium</p>
-            <a href="booking.html?match=RR%20vs%20CSK" class="book-button">Book Tickets</a>
-        </article>
+            <div class="view-controls">
+                <button type="button" id="gridView" class="view-button active">
+                    Grid View
+                </button>
+
+                <button type="button" id="listView" class="view-button">
+                    List View
+                </button>
+            </div>
+
+        </div>
+
+        <div class="match-grid" id="matchContainer">
+
+            <div class="match-card" data-teams="RCB MI">
+                <p class="match-number">MATCH 01</p>
+                <h3>RCB vs MI</h3>
+                <p>Royal Challengers Bengaluru vs Mumbai Indians</p>
+                <p class="match-info">M. Chinnaswamy Stadium</p>
+                <a href="booking.html?match=RCB%20vs%20MI" class="book-button">Book Tickets</a>
+            </div>
+
+            <div class="match-card" data-teams="CSK KKR">
+                <p class="match-number">MATCH 02</p>
+                <h3>CSK vs KKR</h3>
+                <p>Chennai Super Kings vs Kolkata Knight Riders</p>
+                <p class="match-info">M. A. Chidambaram Stadium</p>
+                <a href="booking.html?match=CSK%20vs%20KKR" class="book-button">Book Tickets</a>
+            </div>
+
+            <div class="match-card" data-teams="RR GT">
+                <p class="match-number">MATCH 03</p>
+                <h3>RR vs GT</h3>
+                <p>Rajasthan Royals vs Gujarat Titans</p>
+                <p class="match-info">Sawai Mansingh Stadium</p>
+                <a href="booking.html?match=RR%20vs%20GT" class="book-button">Book Tickets</a>
+            </div>
+
+            <div class="match-card" data-teams="PBKS RCB">
+                <p class="match-number">MATCH 04</p>
+                <h3>PBKS vs RCB</h3>
+                <p>Punjab Kings vs Royal Challengers Bengaluru</p>
+                <p class="match-info">PCA Stadium</p>
+                <a href="booking.html?match=PBKS%20vs%20RCB" class="book-button">Book Tickets</a>
+            </div>
+
+            <div class="match-card" data-teams="RR CSK">
+                <p class="match-number">MATCH 05</p>
+                <h3>RR vs CSK</h3>
+                <p>Rajasthan Royals vs Chennai Super Kings</p>
+                <p class="match-info">Sawai Mansingh Stadium</p>
+                <a href="booking.html?match=RR%20vs%20CSK" class="book-button">Book Tickets</a>
+            </div>
+
+        </div>
+
+        <p id="noMatches" class="no-matches">
+            No matches found for this team.
+        </p>
 
     </div>
 
-    <p id="noMatches" class="no-matches">No matches found for this team.</p>
-</section>
+    <div class="content-section guidelines-section" id="guidelines">
 
-<section class="content-section guidelines-section" id="guidelines">
-    <div class="section-heading">
-        <p class="section-tag">BEFORE YOU VISIT</p>
-        <h2>Stadium Guidelines</h2>
-        <p>Keep these points in mind before entering the stadium.</p>
+        <div class="section-heading">
+            <p class="section-tag">BEFORE YOU VISIT</p>
+            <h2>Stadium Guidelines</h2>
+            <p>Keep these points in mind before entering the stadium.</p>
+        </div>
+
+        <div class="guidelines-grid">
+
+            <div class="guideline-card">
+                <h3>Valid Tickets</h3>
+                <p>Carry a valid ticket and keep it ready at the entrance.</p>
+            </div>
+
+            <div class="guideline-card">
+                <h3>Arrive Early</h3>
+                <p>Reach the stadium early to complete entry checks comfortably.</p>
+            </div>
+
+            <div class="guideline-card">
+                <h3>Follow Rules</h3>
+                <p>Follow stadium instructions and respect other spectators.</p>
+            </div>
+
+        </div>
     </div>
 
-    <div class="guidelines-grid">
-        <div class="guideline-card">
-            <h3>Valid Tickets</h3>
-            <p>Carry a valid ticket and keep it ready at the entrance.</p>
-        </div>
-
-        <div class="guideline-card">
-            <h3>Arrive Early</h3>
-            <p>Reach the stadium early to complete entry checks comfortably.</p>
-        </div>
-
-        <div class="guideline-card">
-            <h3>Follow Rules</h3>
-            <p>Follow stadium instructions and respect other spectators.</p>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <p>IPL Ticket Booking Website</p>
-    <p>Enjoy the game and support your team!</p>
-</footer>
+    <footer>
+        <p>IPL Ticket Booking Website</p>
+        <p>Enjoy the game and support your team!</p>
+    </footer>
 
 </body>
 </html>
